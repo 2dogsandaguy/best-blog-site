@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS techVlog_db;
+CREATE DATABASE techVlog_db;
