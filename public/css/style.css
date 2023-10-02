@@ -1,24 +1,140 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-}
+/* Global Styles */
 
-.no-button {
-  background: none;
-  border: none;
+body {
+  background-color: rgb(39, 29, 223);
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
 }
 
-.no-button:hover {
-  color: #065b83;
+/* Header Styles */
+
+.navTitle {
+  font-weight: 900;
+  font-size: 2rem; /* Adjust as needed */
+}
+
+/* Blog Post Styles */
+
+.blogBox {
+  margin-top: 8px;
+  border: 1px solid #ccc; /* Add border and adjust color */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.blogTitle {
+  text-decoration: none;
+  color: rgb(245, 229, 16);
+  font-weight: bold; /* Make the title bold */
+  font-size: 1.5rem; /* Adjust as needed */
+}
+
+.blogDesc {
+  border: 1px solid #ccc; /* Add border and adjust color */
+  margin-bottom: 10px; /* Increase margin for spacing */
+  padding: 10px; /* Add padding for spacing */
+  background-color: rgb(143, 62, 124);
+}
+
+.blogDescMain {
+  font-weight: 700;
+}
+
+.blogDescTwo {
+  font-size: 1.25rem; /* Adjust as needed */
+  font-style: italic;
+}
+
+.blogCreate {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.75rem; /* Adjust as needed */
+  padding: 5px;
+  color: darkkhaki;
+}
+
+/* Container Styles */
+
+.blogBoxCont {
+  margin-top: 20px; /* Increase margin for spacing */
+  border: 1px solid #ccc; /* Add border and adjust color */
+  padding: 20px; /* Add padding for spacing */
+  background-color: rgb(113, 143, 62);
+}
+
+.formCont {
+  margin-top: 20px; /* Increase margin for spacing */
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.commentCont {
+  margin-top: 20px; /* Increase margin for spacing */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75%;
+  background-color: rgb(113, 143, 62);
+  padding: 10px; /* Add padding for spacing */
+  border: 1px dashed #ccc; /* Add dashed border and adjust color */
+}
+
+.commentOwner {
+  font-size: 0.875rem; /* Adjust as needed */
+}
+
+.btnComment {
+  margin-top: 10px;
+}
+
+.commentText {
+  font-weight: bold;
+  padding-top: 10px;
+  background-color: rgb(113, 143, 62);
+}
+
+/* Footer Styles */
+
+.headerRow {
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+/* Link Styles */
+
+a:link {
+  color: rgb(29, 200, 23);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(182, 179, 41);
+  text-decoration: none;
+}
+
+a:hover {
+  color: deeppink;
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
+/* Form Styles */
+
+.login,
+.signup {
+  margin-left: 25px;
   font-weight: bold;
-  margin-left: -5px;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+/* Responsive Styles (Add as needed) */
+
+@media screen and (max-width: 768px) {
+  .formCont,
+  .commentCont,
+  .blogBoxCont {
+    max-width: 100%;
+  }
 }

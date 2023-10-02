@@ -3,7 +3,7 @@ module.exports = {
     // Format date as MM/DD/YYYY
     return date.toLocaleDateString();
   },
-  format_amount: (amount) => {
+/*   format_amount: (amount) => {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
@@ -18,5 +18,5 @@ module.exports = {
     } else {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
-  },
+  }, */
 };
