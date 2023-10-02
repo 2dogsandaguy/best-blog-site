@@ -30,8 +30,4 @@ document.addEventListener('DOMContentLoaded', function() {
   if (loginForm) {
     loginForm.addEventListener('submit', loginFormHandler);
   }
-
-  // Define the signupFormHandler function (if needed)
-
-  // Add event listeners to other forms and elements (if needed)
 });
