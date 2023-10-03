@@ -1,18 +1,18 @@
 [
     {
-      "text": "How old are you?",
+      "comment_description": "How old are you?",
       "user_id": 1,
       "blog_id":3
     
     },
     {
-      "text": "The Ultimate Tech Quiz",
+      "comment_description": "The Ultimate Tech Quiz",
       "user_id": 2,
       "blog_id":1
      
     },
     {
-      "text": "I suck at code",
+      "comment_description": "I suck at code",
       "user_id":3,
       "blog_id":2
     
