@@ -42,4 +42,10 @@ const newBlogForm = document.querySelector('.new-blog-form');
 if (newBlogForm) {
   newBlogForm.addEventListener('submit', newFormHandler);
 }
+const deleteButtons = document.querySelectorAll('.delete-blog');
+
+deleteButtons.forEach((button) => {
+  button.addEventListener('click', delButtonHandler);
+});
+
 });
