@@ -18,7 +18,7 @@
 <!-- Check if a user is logged in -->
 {{#if logged_in}}
 
-<form class="new-comment-form formCont d-flex flex-wrap justify-content-center" data-blog_Post_id={{BlogPost.id}}>
+<form class="new-comment-form formCont d-flex flex-wrap justify-content-center" data-blog_Post_id={{blogPost.id}}>
     <div class="textAreaCont p-2">
         <!-- Textarea for entering a new comment -->
         <textarea id='comment_description' name="comment-body"
@@ -38,7 +38,7 @@
 <h2 class="text-center">Comments</h2>
 
 <!-- Iterate through each comment and display its content and author information -->
-{{#each blogPost.comments as |comment|}}
+{{#each blogPost.Comments as |comment|}}
 <div class="commentCont">
     <!-- Display the comment text -->
     <p class="text-center commentText">{{comment.comment_description}}</p>

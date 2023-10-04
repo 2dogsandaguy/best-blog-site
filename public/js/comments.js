@@ -1,9 +1,10 @@
 const commentFormHandler = async function (event) {
 	event.preventDefault();
 
-	const blog_id_element = document.querySelector('.new-comment-form').dataset.blogid;
-
-	const blog_id= blog_id_element.getAttribute("data-blog_post_id").value.trim();
+	const blog_id_element = document.querySelector('.new-comment-form')
+    const blog_id= blog_id_element.getAttribute("data-blog_post_id")
+    
+	const comment_description = document.querySelector('#comment_description').value.trim();
 
 	if (comment_description) {
 		await fetch('/api/comments', {
