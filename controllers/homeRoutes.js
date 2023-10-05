@@ -83,6 +83,11 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+// Define a route for the Sign Up page
+router.get('/signUp', (req, res) => {
+  // Render the "Sign Up" view/template
+  res.render('signUp'); // Replace 'signUp' with the actual name of your Handlebars template
+});
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
