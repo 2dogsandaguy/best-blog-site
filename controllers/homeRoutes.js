@@ -16,16 +16,18 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const blogPosts = blogData.map((blog) => blog.get({ plain: true }));
-
+/* console.log(blogData) */
     // Pass serialized data and session flag into the template
     res.render('homepage', {
       blogPosts,
-      logged_in: req.session.logged_in,
+      /* logged_in: req.session.logged_in, */
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+
 
 router.get('/blog/:id', async (req, res) => {
   try {
@@ -100,3 +102,19 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+
+//add on later // 
+/* app.get('/', async (req, res) => {
+  try {
+    // Fetch the last 10 blogs from your database
+    const last10Blogs = await BlogModel.find().sort({ date_created: -1 }).limit(10);
+
+    // Render the 'main.handlebars' template with the data
+    res.render('main', { blogs: last10Blogs });
+  } catch (error) {
+    // Handle errors appropriately
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+}); */
