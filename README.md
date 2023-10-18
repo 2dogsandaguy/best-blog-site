@@ -39,7 +39,7 @@ To run the Tech Blog on your local machine, follow these steps:
 
    npm start
 
-Open your web browser and access the application at http://localhost:3001.
+Open your web browser and access the application at https://best-blog-site-9d3168212932.herokuapp.com/.
 
 # Usage
 - Home Page: The home page displays a list of blog posts. Users can click on a blog post to view its details.
