@@ -15,6 +15,32 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// Handle the PUT request to update a blog post
+router.put('/blog/update/:id', withAuth, async (req, res) => {
+  try {
+    const updatedBlog = await Blog.update(
+      {
+        title: req.body.title,
+        description: req.body.description,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+
+    if (!updatedBlog[0]) {
+      res.status(404).json({ message: 'No blog post found with this id!' });
+      return;
+    }
+
+    res.status(200).json({ message: 'Blog post updated successfully!' });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const blogData = await Blog.destroy({

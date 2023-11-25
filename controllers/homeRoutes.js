@@ -66,6 +66,43 @@ router.get('/blog/:id', async (req, res) => {
   }
 });
 
+// Inside homeRoutes.js or another appropriate route file
+router.get('/blog/update/:id', async (req, res) => {
+  // Fetch data and render the update page
+  try {
+      const blogData = await Blog.findByPk(req.params.id);
+      res.render('update', { blogData });
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+// Handle the PUT request to update a blog post
+router.put('/blog/update/:id', withAuth, async (req, res) => {
+  try {
+    const updatedBlog = await Blog.update(
+      {
+        title: req.body.title,
+        description: req.body.description,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+
+    if (!updatedBlog[0]) {
+      res.status(404).json({ message: 'No blog post found with this id!' });
+      return;
+    }
+
+    res.status(200).json({ message: 'Blog post updated successfully!' });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to the route
 router.get('/profile', withAuth, async (req, res) => {
   try {

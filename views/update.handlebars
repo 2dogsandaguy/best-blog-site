@@ -1,0 +1,36 @@
+ <div class="text">
+    <div class="container blogBoxCont">
+        <div class="row headerRow">
+            <div class="col-8">
+                <!-- Display the title of the blog post -->
+                <h2 class="blogTitle text-uppercase">{{blogPost.title}}</h2>
+            </div>
+            <div class="col-4">
+                <!-- Display the author and creation date of the blog post -->
+                <p class="blogCreate text-right">Created by {{blogPost.user.name}} on {{format_date blogPost.date_created}}</p>
+            </div>
+        </div>
+        <!-- Display the description of the blog post -->
+        <p class="text-center blogDescTwo">{{blogPost.description}}</p>
+    </div>
+</div>
+
+<!-- Update form for the blog post -->
+<form id="update-blog-form" class="formCont d-flex flex-wrap justify-content-center" data-blog_Post_id={{blogPost.id}}>
+    <div class="textAreaCont p-2">
+        <label for="update-title">Title:</label>
+        <!-- Input for updating the title -->
+        <input type="text" id="update-title" name="update-title" value="{{blogPost.title}}">
+        <br>
+        <label for="update-description">Description:</label>
+        <!-- Textarea for updating the description -->
+        <textarea id="update-description" name="update-description" rows="3">{{blogPost.description}}</textarea>
+    </div>
+    <div class="btnComment p-2">
+        <!-- Button for submitting the update form -->
+        <button class="button btn btn-primary" type="submit">Update Blog</button>
+    </div>
+</form>
+
+<!-- Include an external JavaScript file for handling updates -->
+<script src="/js/update.js"></script>

@@ -48,4 +48,13 @@ deleteButtons.forEach((button) => {
   button.addEventListener('click', delButtonHandler);
 });
 
+
+document.addEventListener('click', async (event) => {
+  if (event.target.classList.contains('edit-blog')) {
+    const blogId = event.target.getAttribute('data-id');
+    // Redirect the user to the blog editing page for the specified blogId
+    window.location.href = `/blog/update/${blogId}`;
+  }
+});
+
 });
